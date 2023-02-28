@@ -108,11 +108,11 @@ public class Flow {
     }
 
     public void itemAdd(String item){
-        System.out.println(item + " à bien était ajouté à votre inventaire");
+        System.out.println(item + " à bien été ajouté à votre inventaire");
     }
 
     public void itemRemove(String item){
-        System.out.println(item + " à bien était retiré de votre inventaire");
+        System.out.println(item + " à bien été retiré de votre inventaire");
     }
 
     public void showInventory(Player player){
