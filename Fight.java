@@ -69,7 +69,7 @@ public class Fight {
                 if(this.player.haveItemByName("Un collier de résistance")) damage -= damage * 0.2;
 
                 this.player.removeHealth(damage);
-                this.flow.showBasicText(String.format("%s vous inflige %d de dégats, il vous reste %d pv",this.monster.getName(), damage,this.player.getHealth()), Flow.Color.YELLOW);
+                this.flow.showBasicText(String.format("%s vous infligez %d de dégats, il vous reste %d pv",this.monster.getName(), damage,this.player.getHealth()), Flow.Color.YELLOW);
             }else{
                 this.flow.showBasicText("Vous avez esquivé l'attaque !");
             }
