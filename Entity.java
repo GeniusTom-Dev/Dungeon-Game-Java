@@ -15,24 +15,12 @@ public class Entity {
         return damage;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
     public int getShield() {
         return shield;
     }
 
-    public void setShield(int shield) {
-        this.shield = shield;
-    }
-
     public int getVelocity() {
         return velocity;
-    }
-
-    public void setVelocity(int velocity) {
-        this.velocity = velocity;
     }
 
     public int getHealth() {

@@ -4,7 +4,7 @@ public class Player extends Entity{
     private int x;
     private int y;
     public  Map<String, Integer> maxObjectType = new HashMap<String, Integer>();
-    private List<Item> inventory = new ArrayList<>();
+    private ArrayList<Item> inventory = new ArrayList<>();
     private int fightXP = 0;
     private int playerLevel = 1;
     private String capacity;
@@ -63,8 +63,8 @@ public class Player extends Entity{
 
     public int getNbElementByType(String type){
         int nbElement = 0;
-        for (int i = 0; i < inventory.size(); i++) {
-            if(Objects.equals(inventory.get(i).getType(), type)) nbElement++;
+        for(Item item: inventory){
+            if(Objects.equals(item.getType(), type)) nbElement++;
         }
         return nbElement;
     }
@@ -88,8 +88,7 @@ public class Player extends Entity{
     }
 
     public void removeInventoryItemByName(String name){
-        for (int i = 0; i < inventory.size(); i++) {
-            Item item = inventory.get(i);
+        for(Item item: inventory){
             if(Objects.equals(item.getName(), name)){
                 inventory.remove(item);
             }
@@ -99,9 +98,10 @@ public class Player extends Entity{
     public String[] getElementByType(String type){
         String[] itemName = new String[this.getNbElementByType(type)];
         int listIndex = 0;
-        for (int i = 0; i < inventory.size(); i++) {
-            if(Objects.equals(inventory.get(i).getType(), type)){
-                itemName[listIndex] = inventory.get(i).getName();
+
+        for(Item item: inventory){
+            if(Objects.equals(item.getType(), type)){
+                itemName[listIndex] = item.getName();
                 listIndex++;
             }
         }

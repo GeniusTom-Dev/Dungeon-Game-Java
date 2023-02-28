@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Fight {
     private boolean inFight;
-    private boolean isBoss;
+    private final boolean isBoss;
     private Monster monster;
     private Player player;
     private boolean playerPlay = true;
@@ -169,7 +169,6 @@ public class Fight {
         while (!userUseItem){
             String useItemIndex = this.flow.inputText("Quelle object voulez vous utiliser (back pour reculer)?");
             if(Objects.equals(useItemIndex, "back")){
-                userUseItem = true;
                 playerPlay = false;
                 return;
             }

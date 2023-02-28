@@ -77,8 +77,8 @@ public class Flow {
         System.out.println();
         System.out.println(message);
         setColor(Color.GREEN);
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(String.format("%d. %s",i, list[i]));
+        for (int index = 0; index < list.length; index++) {
+            System.out.println(String.format("%d. %s",index, list[index]));
         }
         setColor(Color.RESET);
     }

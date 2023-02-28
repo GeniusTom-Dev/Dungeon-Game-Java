@@ -29,34 +29,34 @@ public class Dungeon {
 
     private void generateMap(int width, int height, int[][] wall, int[][] chest,int[] boss, int[][] monster, int[] itemMapPos){
         this.plateGame = new char[height][];
-        for (int i = 0; i < this.plateGame.length; i++) {
-            this.plateGame[i] = new char[width];
+        for (int indexChar = 0; indexChar < this.plateGame.length; indexChar++) {
+            this.plateGame[indexChar] = new char[width];
         }
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                this.plateGame[i][j] = ' ';
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                this.plateGame[y][x] = ' ';
             }
         }
 
-        for (int k = 0; k < wall.length; k++) {
-            this.plateGame[wall[k][0]][wall[k][1]] = 'W';
+        for (int indexWall = 0; indexWall < wall.length; indexWall++) {
+            this.plateGame[wall[indexWall][0]][wall[indexWall][1]] = 'W';
         }
 
-        for (int k = 0; k < chest.length; k++) {
-            this.plateGame[chest[k][0]][chest[k][1]] = 'C';
+        for (int indexChest = 0; indexChest < chest.length; indexChest++) {
+            this.plateGame[chest[indexChest][0]][chest[indexChest][1]] = 'C';
         }
 
-        for (int k = 0; k < monster.length; k++) {
-            this.plateGame[monster[k][0]][monster[k][1]] = 'M';
+        for (int indexMonster = 0; indexMonster < monster.length; indexMonster++) {
+            this.plateGame[monster[indexMonster][0]][monster[indexMonster][1]] = 'M';
         }
 
         this.plateGame[boss[0]][boss[1]] = 'B';
         this.plateGame[itemMapPos[0]][itemMapPos[1]] = 'D';
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if(this.plateGame[i][j] == ' '){
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if(this.plateGame[y][x] == ' '){
                     this.emptyCharCpt += 1;
                 }
             }
@@ -65,10 +65,10 @@ public class Dungeon {
         this.emptyChar = new int[this.emptyCharCpt][];
         this.emptyCharCpt = 0;
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if(this.plateGame[i][j] == ' '){
-                    this.emptyChar[this.emptyCharCpt] = new int[]{i, j};
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if(this.plateGame[y][x] == ' '){
+                    this.emptyChar[this.emptyCharCpt] = new int[]{y, x};
                     this.emptyCharCpt++;
                 }
             }
@@ -85,23 +85,23 @@ public class Dungeon {
 
     }
 
-    public void showMap(int x, int y){
+    public void showMap(int playerX, int playerY){
         char[][] gamePlate = this.plateGame;
-        char beforeChar = gamePlate[y][x];
-        gamePlate[y][x] = 'P';
+        char beforeChar = gamePlate[playerY][playerX];
+        gamePlate[playerY][playerX] = 'P';
         this.flow.setColor(Flow.Color.YELLOW);
-        for (int i = 0; i < gamePlate.length; i++) {
-            for (int j = 0; j < gamePlate[i].length; j++) {
-                if(gamePlate[i][j] == 'W'){
+        for (int y = 0; y < gamePlate.length; y++) {
+            for (int x = 0; x < gamePlate[y].length; x++) {
+                if(gamePlate[y][x] == 'W'){
                     System.out.print(" □\t");
                 }else{
-                    System.out.print(" " + gamePlate[i][j] + "\t");
+                    System.out.print(" " + gamePlate[y][x] + "\t");
                 }
             }
             System.out.println();
         }
         this.flow.setColor(Flow.Color.RESET);
-        gamePlate[y][x] = beforeChar;
+        gamePlate[playerY][playerX] = beforeChar;
     }
 
     public char getCharInIndex(int x, int y){

@@ -179,10 +179,7 @@ public class Game {
                             doAction = true;
                         }else if(action.equals("r")) {
                             String[] inv = this.player.getElementByType(item.getType());
-                            System.out.println("Voici vos éléments:");
-                            for (int i = 0; i < inv.length; i++) {
-                                System.out.printf("%d. %s\n", i, inv[i]);
-                            }
+                            this.flow.showListIndex("Voici vos éléments:", inv);
                             boolean deletedItem = false;
                             while (!deletedItem){
                                 String value = this.flow.inputText("Quel élément voulez vous supprimer ?");
