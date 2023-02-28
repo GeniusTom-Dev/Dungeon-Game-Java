@@ -12,6 +12,7 @@ public class Main {
         int[][] chest = {
                 {1,3},{3,4},
         };
+
         int[][] monster = {{1, 1}, {3,3}};
         int[] boss = {0,0};
         int[] itemMapPos = {3,2};
