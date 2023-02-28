@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea2fde6d-fd6e-461e-8680-1305c8b84ae3" name="Changes" comment="fix french error">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/Fight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/Fight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dungeon-Game-Java/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,18 @@
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Dungeon-Game-Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,7 +75,8 @@
       <updated>1677591040763</updated>
       <workItem from="1677591042036" duration="813000" />
       <workItem from="1677591873965" duration="80000" />
-      <workItem from="1677592041658" duration="17000" />
+      <workItem from="1677592041658" duration="65000" />
+      <workItem from="1677592114490" duration="1743000" />
     </task>
     <task id="LOCAL-00001" summary="fix french error">
       <created>1677591231525</created>
@@ -97,11 +113,29 @@
       <option name="project" value="LOCAL" />
       <updated>1677591550912</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix french error">
+      <created>1677592075561</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677592075561</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix french error" />
